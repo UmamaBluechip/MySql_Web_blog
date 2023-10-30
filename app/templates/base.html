@@ -27,11 +27,12 @@
             <a class="nav-link" href="{{ url_for('login') }}"><b>Login</b></a>
           </li>
 
+
+          {% if current_user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('create_post') }}"><b>New Post</b></a>
           </li>
 
-          {% if current_user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('my_posts') }}"><b>My Posts</b></a>
             </li>
