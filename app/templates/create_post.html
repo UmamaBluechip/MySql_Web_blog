@@ -3,7 +3,7 @@
 {% block title %}Create a Post{% endblock %}
 
 {% block content %}
-  <h2>Create a Post</h2>
+  <h2 style="font-family: Arial, Helvetica, sans-serif; font: bold;">Create a Post</h2>
   <form method="POST">
     {{ form.hidden_tag() }}
     <div class="form-group">
@@ -14,6 +14,6 @@
       {{ form.content.label(class="form-control-label") }}
       {{ form.content(class="form-control") }}
     </div>
-    <button type="submit" class="btn btn-primary">Create Post</button>
+    <button type="submit" class="btn btn-primary" style="background-color: silver; font-weight: bold; color: black;">Create Post</button>
   </form>
 {% endblock %}

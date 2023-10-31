@@ -3,17 +3,19 @@
 {% block title %}My Posts{% endblock %}
 
 {% block content %}
-  <h2>My Posts</h2>
+  <h2 style="font-family: Arial, Helvetica, sans-serif; font: bold;">My Posts</h2>
+  <p style="font-style: italic;">The posts by you:</p>
+
   <ul>
     {% for post in current_user.posts %}
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">
-        <div class="card-body">
+        <div class="card-body" style="background-color: silver;">
           <h2 class="card-title">{{ post.title }}</h2>
           <p class="card-text">{{ post.excerpt }}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <a href="{{ url_for('post', post_id=post.id) }}" class="btn btn-sm btn-outline-secondary">Read More</a>
+              <a href="{{ url_for('post', post_id=post.id) }}" class="btn btn-sm btn-outline-secondary" style="color: black;">Read More</a>
             </div>
             <small class="text-muted">{{ post.date_posted.strftime('%B %d, %Y') }}</small>
           </div>

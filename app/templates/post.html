@@ -5,6 +5,6 @@
 {% block content %}
   <h1>{{ post.title }}</h1>
   <p>{{ post.content }}</p>
-  <p>Posted by: {{ post.author.username }}</p>
+  <p style="font-style: italic;">Posted by: {{ post.author.username }}</p>
   <a href="{{ url_for('home') }}">Back to Home</a>
 {% endblock %}
